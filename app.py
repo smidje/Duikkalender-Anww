@@ -916,7 +916,7 @@ def page_afrekening():
                                "betaald_op": dt.utcnow().isoformat() }
                         afrekening_insert(row)
                         if row["voornaam"] or row["achternaam"]:
-                            run_db(lambda c: c.table("duikers").update({"rest_saldo": float(r["RestNieuw"])}).eq("voornaam", row["voornaam"]).eq("achternaam", row["achternaam"]).execute(), what="duike[...]
+                            run_db(lambda c: c.table("duikers").update({"rest_saldo": float(r["RestNieuw"])}).eq("voornaam", row["voornaam"]).eq("achternaam", row["achternaam"]).execute(), what="duike[...]),
                     st.success("Afrekening geregistreerd."); st.rerun()
             except Exception as e: st.error(f"Registratie mislukt: {e}")
 
