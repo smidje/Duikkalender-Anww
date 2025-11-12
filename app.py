@@ -1028,7 +1028,7 @@ def page_ledenbeheer():
         st.dataframe(df[show].sort_values(["achternaam","voornaam"], na_position="last"), use_container_width=True, hide_index=True)
     else:
         st.info("Nog geen leden.")
-    st.divider(); st.subheader("Lid toevoegen / bijwerken")
+    st.divider(); st.subheader("Lid toevoegen")
     with st.form("leden_form", clear_on_submit=True):
         c1, c2, c3 = st.columns(3)
         with c1:
