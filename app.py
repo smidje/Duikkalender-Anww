@@ -204,7 +204,7 @@ def _banner_html(img_bytes: bytes, meta: dict) -> str:
 
 st.set_page_config(page_title="ANWW Duikapp", layout="wide")
 APP_BUILD = "v2025-10-20"
-APP_PUBLIC_URL = os.getenv("APP_PUBLIC_URL", "").rstrip("/")
+APP_PUBLIC_URL = os.getenv("https://duikkalender-anww-dhr6zxhqzffqbecwru7new.streamlit.app/", "").rstrip("/")
 
 def inject_css():
     st.markdown("""
